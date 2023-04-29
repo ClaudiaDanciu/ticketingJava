@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Customer
+comment0.text=\n\ The\ Customer\ Class\ represents\ a\ type\ of\ user\ in\ ticket\ reservation\ system\n\n\ @ClaudiaDanciu\n\ @29.04.2023\n
+comment1.params=customerAddress\ customerName\ customerUsername\ customerEmail\ customerPassword
+comment1.target=Customer(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Customer\n
+comment2.params=seat
+comment2.target=void\ selectSeat(Seat)
+comment3.params=customerUsername\ customerPassword
+comment3.target=void\ login(java.lang.String,\ java.lang.String)
+comment4.params=event
+comment4.target=void\ selectEvent(Event)
+comment5.params=show
+comment5.target=void\ selectShow(Show)
+comment6.params=
+comment6.target=void\ register()
+comment7.params=tickets
+comment7.target=void\ purchaseTickets(java.util.ArrayList)
+comment8.params=customerAddress\ customerName\ customerUsername\ customerEmail\ customerPassword
+comment8.target=void\ updateProfile(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+numComments=9
