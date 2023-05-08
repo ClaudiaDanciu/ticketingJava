@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=SeatTest
+comment0.text=\n\ The\ test\ class\ SeatTest.\n\n\ @Claudia\ Danciu\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=void\ testSeatAvailability()
+comment1.text=\ This\ test\ checks\ the\ basic\ functionality\ of\ the\ \n\ isAvailable(),\n\ reserveSeat(),\ \n\ and\ releaseSeat()\ \n\ methods\ of\ the\ Seat\ class.\n
+numComments=2
