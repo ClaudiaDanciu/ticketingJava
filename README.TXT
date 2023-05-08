@@ -1,12 +1,9 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
-------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: Venue Management System
+PURPOSE OF PROJECT: The Venue Management System was developed in order to manage events, shows, and promotions in a venue. 
+VERSION or DATE: Version 1.0 (May 2023)
+HOW TO START THIS PROJECT: To start using the Venue Management System follow these steps:
+1. Open BlueJ and open project.
+2. Select the project in order to import it
+AUTHORS: Claudia Danciu
+USER INSTRUCTIONS: Once the program is running, follow the instructions
