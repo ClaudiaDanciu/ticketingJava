@@ -18,26 +18,46 @@ public abstract class Customer
     /**
      * Constructor for objects of class Customer
      */
-    public Customer(String customerAddress, String customerName, String customerUsername, 
-    String customerEmail, String customerPassword)
+    public Customer(String customerAddress,
+                    String customerName,
+                    String customerUsername, 
+                    String customerEmail, 
+                    String customerPassword
+                    )
     {
         // initialise instance variables
-        this.customerAddress = customerAddress;
-        this.customerName = customerName;
-        this.customerUsername = customerUsername;
-        this.customerEmail = customerEmail;
-        this.customerPassword = customerPassword;
+        this.customerAddress    = customerAddress;
+        this.customerName       = customerName;
+        this.customerUsername   = customerUsername;
+        this.customerEmail      = customerEmail;
+        this.customerPassword   = customerPassword;
     }
     
         // methods for class Customer
+        
         public abstract void selectSeat(Seat seat);
+        
         public abstract void login(String customerUsername, String customerPassword);
+        
         public abstract void selectEvent(Event event);
+        
         public abstract void selectShow(Show show);
-        public abstract void register();
+        
+        public abstract void register(String customerAddress,
+                                        String customerName, 
+                                        String customerUsername, 
+                                        String customerEmail, 
+                                        String customerPassword
+                                        );
+        
+        
         public abstract void purchaseTickets(ArrayList<Ticket> tickets);
+        
         public abstract void updateProfile(String customerAddress, 
-        String customerName, String customerUsername, String customerEmail, 
-        String customerPassword);
+                                            String customerName,
+                                            String customerUsername,
+                                            String customerEmail, 
+                                            String customerPassword
+                                            );
     }
 

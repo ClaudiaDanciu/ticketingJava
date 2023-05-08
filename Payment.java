@@ -1,33 +1,87 @@
+import java.util.Scanner;
 
 /**
- * Write a description of class Payment here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * The Payment class handles the payment processing and stores the payment details.
+ * @Claudia Danciu
  */
 public class Payment
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private String cardNumber;
+    private String billingAddress;
+    private double totalPrice;
 
     /**
      * Constructor for objects of class Payment
      */
-    public Payment()
+    public Payment(String cardNumber, String billingAddress, double totalPrice)
     {
         // initialise instance variables
-        x = 0;
+        this.cardNumber     = cardNumber;
+        this.billingAddress = billingAddress;
+        this.totalPrice     = totalPrice;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    
+    public void submitPayment(String cardNumber,
+                                String billingAddress, 
+                                double totalPrice
+                                ) 
     {
-        // put your code here
-        return x + y;
+        if (verifyCardNumber(cardNumber) && verifyBillingAddress(billingAddress)) 
+        {
+            // payment successful
+            System.out.println("Payment submitted successfully.");
+        } 
+        else 
+        {
+            // payment failed
+            System.out.println("Payment failed.");
+        }
+    }
+    
+    public boolean verifyCardNumber(String cardNumber) 
+    {
+        // verify card number
+        if (cardNumber.matches("[0-9]{16}")) 
+        {
+            return true;
+        } 
+        else 
+        {
+            System.out.println("Invalid card number.");
+            return false;
+        }
+    }
+    
+    public boolean verifyBillingAddress(String billingAddress) 
+    {
+        // verify billing address
+        if (billingAddress.length() >= 5)
+        {
+            return true;
+        } 
+        else
+        {
+            System.out.println("Invalid billing address.");
+            return false;
+        }
+    }
+    
+    public void applyDiscount(Promotion promotion) 
+    {
+        double discountAmount = promotion.getDiscountAmount();
+        double discountedPrice = totalPrice * (1 - discountAmount);
+        totalPrice = discountedPrice;
+    }
+    
+    public void promptForPaymentDetails() 
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter your card number: ");
+        String cardNumber = input.nextLine();
+        System.out.print("Enter your billing address: ");
+        String billingAddress = input.nextLine();
+        submitPayment(cardNumber, billingAddress, totalPrice);
     }
 }
